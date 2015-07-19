@@ -1,0 +1,36 @@
+{
+  "name": "spaceholder",
+  "version": "1.1.0",
+  "description": "Download placeholder images from public domain sources",
+  "preferGlobal": true,
+  "bin": {
+    "spaceholder": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ecrmnn/spaceholder"
+  },
+  "keywords": [
+    "placeholder",
+    "images",
+    "lorempixel",
+    "placehold.it",
+    "placeimg",
+    "public",
+    "domain",
+    "images"
+  ],
+  "author": "Daniel Eckermann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ecrmnn/spaceholder/issues"
+  },
+  "homepage": "https://github.com/ecrmnn/spaceholder",
+  "dependencies": {
+    "commander": "^2.8.1",
+    "random-string": "^0.1.2"
+  }
+}
