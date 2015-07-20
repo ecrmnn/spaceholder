@@ -1,9 +1,13 @@
 # spaceholder
 Download placeholder images from public domain sources
 
+[![npm version](https://img.shields.io/npm/v/spaceholder.svg)](http://badge.fury.io/js/spaceholder)
+[![npm version](https://img.shields.io/npm/dm/spaceholder.svg)](http://badge.fury.io/js/spaceholder)
+[![npm version](https://img.shields.io/npm/l/spaceholder.svg)](http://badge.fury.io/js/spaceholder)
+
 #### What is it?
 Spaceholder makes it easy to download placeholder images when you need them.
-Images are downloaded from Lorem Pixel, Placehold.it and PlaceImg.
+Images are downloaded from LoremPixel.com, Placehold.it, PlaceIMG.com, Dummyimage.com.
 
 #### Installation
 Spaceholder requires that you have Node.js installed on you computer

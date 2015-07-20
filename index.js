@@ -10,7 +10,6 @@ var program = require('./commanderConfig');
 
 var createdFilesCount = 0;
 var createdFiles = [];
-var startDownload = true;
 
 var download = function (url, dest) {
   'use strict';
@@ -23,10 +22,16 @@ var download = function (url, dest) {
         'use strict';
 
         createdFilesCount++;
+        createdFiles.push(dest);
 
         var percentage = Math.ceil((createdFilesCount/program.number*100));
 
         console.info('Downloaded ' + createdFilesCount + ' of ' + program.number + '. [' + percentage + ' %]');
+
+        if (createdFilesCount === program.number) {
+          console.info("\n" + program.number + ' image(s) successfully downloaded:');
+          console.log(createdFiles);
+        }
       });
     });
     file.on('error', function () {

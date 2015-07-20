@@ -2,7 +2,8 @@ module.exports = {
   providers: {
     LoremPixel: require('./providers/LoremPixel'),
     PlaceholdIt: require('./providers/PlaceholdIt'),
-    PlaceImg: require('./providers/PlaceImg')
+    PlaceImg: require('./providers/PlaceImg'),
+    DummyImage: require('./providers/DummyImage')
   },
 
   provider: 'random',
