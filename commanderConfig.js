@@ -1,7 +1,7 @@
 var program = require('commander');
 var Image = require('./image/Image');
 
-module.exports = program.version('1.2.0', '-v, --version')
+module.exports = program.version('1.2.1', '-v, --version')
   .option('-n, --number [integer]', 'Number of files to generate', function (numberString) {
     'use strict';
 
@@ -23,7 +23,7 @@ module.exports = program.version('1.2.0', '-v, --version')
     return size;
 
   }, '1024x768')
-  .option('-p, --provider [provider]', 'Set the image provider; LoremPixel, PlaceholdIt, PlaceImg', function (provider) {
+  .option('-p, --provider [provider]', 'Set the image provider; LoremPixel, PlaceholdIt, PlaceImg, DummyImage', function (provider) {
     'use strict';
 
     Image.setProvider(provider);
