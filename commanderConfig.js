@@ -1,7 +1,7 @@
 var program = require('commander');
 var Image = require('./image/Image');
 
-module.exports = program.version('1.3.0', '-v, --version')
+module.exports = program.version('1.3.1', '-v, --version')
   .option('-n, --number [integer]', 'Number of files to generate', function (numberString) {
     'use strict';
 
