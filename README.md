@@ -1,6 +1,7 @@
 # spaceholder
 Download placeholder images from public domain sources
 
+[![Build Status](https://travis-ci.org/ecrmnn/spaceholder.svg?branch=master)](https://travis-ci.org/ecrmnn/spaceholder)
 [![npm version](https://img.shields.io/npm/v/spaceholder.svg)](http://badge.fury.io/js/spaceholder)
 [![npm version](https://img.shields.io/npm/dm/spaceholder.svg)](http://badge.fury.io/js/spaceholder)
 [![npm version](https://img.shields.io/npm/l/spaceholder.svg)](http://badge.fury.io/js/spaceholder)
