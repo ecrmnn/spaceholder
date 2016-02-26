@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 
 var http = require('http');
+var https = require('https');
 var fs = require('fs');
 var random = require('random-string');
 var Image = require('./image/Image')
@@ -15,7 +16,8 @@ var download = function (url, dest) {
   'use strict';
 
   var file = fs.createWriteStream(dest);
-  var request = http.get(url, function (response) {
+
+  var handleResponse = function (response) {
     response.pipe(file);
     file.on('finish', function () {
       file.close(function () {
@@ -37,7 +39,17 @@ var download = function (url, dest) {
     file.on('error', function () {
       console.log('Failed');
     })
-  });
+  };
+
+  if (url.startsWith('http://')) {
+    var request = http.get(url, function (response) {
+      handleResponse(response)
+    });
+  } else {
+    var request = https.get(url, function (response) {
+      handleResponse(response)
+    });
+  }
 };
 
 var filename = function (iterator) {

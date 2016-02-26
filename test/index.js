@@ -63,4 +63,12 @@ describe('Image Providers', function () {
     expect(Image.getImageUrl(size))
       .to.equal('http://dummyimage.com/400x400/000/fff');
   });
+
+  it('returns UnsplashIt URL', function () {
+
+    Image.setProvider('UnsplashIt');
+
+    expect(Image.getImageUrl(size))
+        .to.equal('https://unsplash.it/400/400');
+  });
 });

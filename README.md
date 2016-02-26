@@ -8,7 +8,7 @@ Download placeholder images from public domain sources
 
 #### What is it?
 Spaceholder makes it easy to download placeholder images when you need them.
-Images are downloaded from LoremPixel.com, Placehold.it, PlaceIMG.com, Dummyimage.com.
+Images are downloaded from LoremPixel.com, Placehold.it, PlaceIMG.com, Dummyimage.com, Unsplash.it.
 
 #### Installation
 Spaceholder requires that you have Node.js installed on you computer
