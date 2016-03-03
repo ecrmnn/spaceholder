@@ -23,7 +23,8 @@ module.exports = program.version('1.3.1', '-v, --version')
     return size;
 
   }, '1024x768')
-  .option('-p, --provider [provider]', 'Set the image provider; LoremPixel, PlaceholdIt, PlaceImg, DummyImage', function (provider) {
+  .option('-p, --provider [provider]', 'Set the image provider; LoremPixel, PlaceholdIt, ' +
+      'PlaceImg, DummyImage, UnsplashIt', function (provider) {
     'use strict';
 
     Image.setProvider(provider);

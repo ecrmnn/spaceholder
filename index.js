@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 
 var http = require('http');
+var https = require('https');
 var fs = require('fs');
 var random = require('random-string');
 var Image = require('./image/Image')
@@ -15,7 +16,8 @@ var download = function (url, dest) {
   'use strict';
 
   var file = fs.createWriteStream(dest);
-  var request = http.get(url, function (response) {
+
+  var handleResponse = function (response) {
     response.pipe(file);
     file.on('finish', function () {
       file.close(function () {
@@ -24,7 +26,7 @@ var download = function (url, dest) {
         createdFilesCount++;
         createdFiles.push(dest);
 
-        var percentage = Math.ceil((createdFilesCount/program.number*100));
+        var percentage = Math.ceil((createdFilesCount / program.number * 100));
 
         console.info('Downloaded ' + createdFilesCount + ' of ' + program.number + '. [' + percentage + ' %]');
 
@@ -37,13 +39,23 @@ var download = function (url, dest) {
     file.on('error', function () {
       console.log('Failed');
     })
-  });
+  };
+
+  if (url.startsWith('http://')) {
+    http.get(url, function (response) {
+      handleResponse(response)
+    });
+  } else {
+    https.get(url, function (response) {
+      handleResponse(response)
+    });
+  }
 };
 
 var filename = function (iterator) {
   'use strict';
 
-  return 'spaceholder_' + program.size + '_' + random({ length: 4 }) + iterator + random({ length: 4 }) + '.jpg'
+  return 'spaceholder_' + program.size + '_' + random({length: 4}) + iterator + random({length: 4}) + '.jpg'
 }
 
 for (i = 1; i <= program.number; i++) {
