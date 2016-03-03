@@ -3,7 +3,8 @@ module.exports = {
     LoremPixel: require('./providers/LoremPixel'),
     PlaceholdIt: require('./providers/PlaceholdIt'),
     PlaceImg: require('./providers/PlaceImg'),
-    DummyImage: require('./providers/DummyImage')
+    DummyImage: require('./providers/DummyImage'),
+    UnsplashIt: require('./providers/UnsplashIt')
   },
 
   provider: 'random',
