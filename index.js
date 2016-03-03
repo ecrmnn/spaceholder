@@ -26,7 +26,7 @@ var download = function (url, dest) {
         createdFilesCount++;
         createdFiles.push(dest);
 
-        var percentage = Math.ceil((createdFilesCount/program.number*100));
+        var percentage = Math.ceil((createdFilesCount / program.number * 100));
 
         console.info('Downloaded ' + createdFilesCount + ' of ' + program.number + '. [' + percentage + ' %]');
 
@@ -42,11 +42,11 @@ var download = function (url, dest) {
   };
 
   if (url.startsWith('http://')) {
-    var request = http.get(url, function (response) {
+    http.get(url, function (response) {
       handleResponse(response)
     });
   } else {
-    var request = https.get(url, function (response) {
+    https.get(url, function (response) {
       handleResponse(response)
     });
   }
@@ -55,7 +55,7 @@ var download = function (url, dest) {
 var filename = function (iterator) {
   'use strict';
 
-  return 'spaceholder_' + program.size + '_' + random({ length: 4 }) + iterator + random({ length: 4 }) + '.jpg'
+  return 'spaceholder_' + program.size + '_' + random({length: 4}) + iterator + random({length: 4}) + '.jpg'
 }
 
 for (i = 1; i <= program.number; i++) {

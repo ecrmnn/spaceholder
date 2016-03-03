@@ -1,6 +1,6 @@
 {
   "name": "spaceholder",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "description": "Download placeholder images from public domain sources",
   "preferGlobal": true,
   "bin": {
@@ -25,7 +25,18 @@
     "domain",
     "unsplash.it"
   ],
-  "author": "Daniel Eckermann",
+  "author": {
+    "name": "Daniel Eckermann",
+    "email": "danieleckermann@gmail.com",
+    "url": "http://danieleckermann.com"
+  },
+  "contributors": [
+    {
+      "name": "Christoffer Martinsen",
+      "email": "christoffermartinsen@gmail.com",
+      "url": "http://github.com/mrtnsn"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ecrmnn/spaceholder/issues"
