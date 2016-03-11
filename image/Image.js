@@ -4,7 +4,8 @@ module.exports = {
     PlaceholdIt: require('./providers/PlaceholdIt'),
     PlaceImg: require('./providers/PlaceImg'),
     DummyImage: require('./providers/DummyImage'),
-    UnsplashIt: require('./providers/UnsplashIt')
+    UnsplashIt: require('./providers/UnsplashIt'),
+    FakeImg: require('./providers/FakeImg')
   },
 
   provider: 'random',
