@@ -13,9 +13,6 @@ describe('Image Factory', function () {
     var availableProviders = Object.keys(Image.providers);
 
     expect(availableProviders).to.contain(Image.getProvider());
-    expect(availableProviders).to.contain(Image.getProvider());
-    expect(availableProviders).to.contain(Image.getProvider());
-    expect(availableProviders).to.contain(Image.getProvider());
   });
 
   it('returns the correct provider when set', function () {
@@ -33,7 +30,6 @@ describe('Image Providers', function () {
   var size = '400x400';
 
   it('returns Lorem Pixel URL', function () {
-
     Image.setProvider('LoremPixel');
 
     expect(Image.getImageUrl(size))
@@ -41,7 +37,6 @@ describe('Image Providers', function () {
   });
 
   it('returns PlaceholdIt URL', function () {
-
     Image.setProvider('PlaceholdIt');
 
     expect(Image.getImageUrl(size))
@@ -49,7 +44,6 @@ describe('Image Providers', function () {
   });
 
   it('returns PlaceImg URL', function () {
-
     Image.setProvider('PlaceImg');
 
     expect(Image.getImageUrl(size))
@@ -57,7 +51,6 @@ describe('Image Providers', function () {
   });
 
   it('returns DummyImage URL', function () {
-
     Image.setProvider('DummyImage');
 
     expect(Image.getImageUrl(size))
@@ -65,10 +58,16 @@ describe('Image Providers', function () {
   });
 
   it('returns UnsplashIt URL', function () {
-
     Image.setProvider('UnsplashIt');
 
     expect(Image.getImageUrl(size))
         .to.equal('https://unsplash.it/400/400');
+  });
+
+  it('returns FakeImg URL', function () {
+    Image.setProvider('FakeImg');
+
+    expect(Image.getImageUrl(size))
+      .to.equal('http://fakeimg.pl/400x400/384f66/ecf0f1/?text=Spaceholder&font=lobster');
   });
 });

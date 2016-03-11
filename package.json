@@ -1,6 +1,6 @@
 {
   "name": "spaceholder",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Download placeholder images from public domain sources",
   "preferGlobal": true,
   "bin": {
@@ -23,7 +23,10 @@
     "dummy image",
     "public",
     "domain",
-    "unsplash.it"
+    "unsplash.it",
+    "fakeimg.pl",
+    "fake images",
+    "fakeimg"
   ],
   "author": {
     "name": "Daniel Eckermann",
