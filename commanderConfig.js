@@ -1,7 +1,9 @@
+var fs = require('fs');
 var program = require('commander');
 var Image = require('./image/Image');
+var pckg = JSON.parse(fs.readFileSync('./package.json').toString());
 
-module.exports = program.version('1.3.1', '-v, --version')
+module.exports = program.version(pckg.version, '-v, --version')
   .option('-n, --number [integer]', 'Number of files to generate', function (numberString) {
     'use strict';
 
