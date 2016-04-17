@@ -1,4 +1,5 @@
-# spaceholder
+<img src="https://cdn.rawgit.com/ecrmnn/spaceholder/master/spaceholder.png" alt="Spaceholder">
+
 > Download placeholder images from public domain sources blazingly fast
 
 [![Travis](https://img.shields.io/travis/ecrmnn/spaceholder.svg?style=flat-square)](https://travis-ci.org/ecrmnn/spaceholder.svg?branch=master)
