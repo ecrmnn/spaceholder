@@ -1,4 +1,4 @@
-<img src="https://cdn.rawgit.com/ecrmnn/spaceholder/master/spaceholder.png" alt="Spaceholder">
+<img src="https://raw.githubusercontent.com/ecrmnn/spaceholder/master/spaceholder.jpg" alt="Spaceholder">
 
 > Download placeholder images from public domain sources blazingly fast
 
