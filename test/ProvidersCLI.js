@@ -35,6 +35,9 @@ Object.keys(Image.providers).forEach(function (provider) {
     it('should have default dimensions', function () {
       var dimensions = helpers.getDimensions(helpers.getSpaceholders()[0]);
       expect(dimensions).to.be.equal('1024x768');
+    });
+
+    after(function () {
       helpers.deleteSpaceholders();
     });
   });
