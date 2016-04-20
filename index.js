@@ -41,7 +41,7 @@ var download = function (url, dest) {
     })
   };
 
-  if (url.startsWith('http://')) {
+  if (url.substring(0, 7) === 'http://') {
     http.get(url, function (response) {
       handleResponse(response)
     });
