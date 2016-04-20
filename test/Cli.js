@@ -143,4 +143,3 @@ describe('CLI: Usage and information', function () {
     });
   });
 });
-//Object.keys(Image.providers)
