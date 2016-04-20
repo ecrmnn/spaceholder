@@ -1,6 +1,6 @@
 var chai = require('chai');
 var expect = require('chai').expect;
-var Image = require('../image/Image.js');
+var Image = require('../image/Image');
 
 describe('Image Factory', function () {
   'use strict';
@@ -61,7 +61,7 @@ describe('Image Providers', function () {
     Image.setProvider('UnsplashIt');
 
     expect(Image.getImageUrl(size))
-        .to.equal('https://unsplash.it/400/400');
+      .to.equal('https://unsplash.it/400/400');
   });
 
   it('returns FakeImg URL', function () {

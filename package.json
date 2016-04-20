@@ -7,7 +7,7 @@
     "spaceholder": "index.js"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha test/index.js"
+    "test": "node_modules/.bin/mocha test/"
   },
   "repository": {
     "type": "git",
