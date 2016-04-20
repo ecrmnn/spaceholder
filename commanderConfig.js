@@ -1,8 +1,9 @@
 var fs = require('fs');
 var program = require('commander');
 var Image = require('./image/Image');
+var pckg = JSON.parse(fs.readFileSync('./package.json').toString());
 
-module.exports = program.version('1.7.0', '-v, --version')
+module.exports = program.version(pckg.version, '-v, --version')
   .option('-n, --number [integer]', 'Number of files to generate', function (numberString) {
     'use strict';
 
@@ -17,20 +18,20 @@ module.exports = program.version('1.7.0', '-v, --version')
   .option('-s, --size [1024x768]', 'Image size', function (size) {
     'use strict';
 
-    if (size.indexOf('x') == -1) {
+    if (size.indexOf('x') === -1) {
       return '1024x768';
     }
 
     return size;
 
   }, '1024x768')
-  .option('-p, --provider [provider]', 'Set the image provider; LoremPixel, PlaceholdIt, ' +
-      'PlaceImg, DummyImage, UnsplashIt', function (provider) {
-    'use strict';
+  .option('-p, --provider [provider]', 'Set the image provider; ' + Object.keys(Image.providers).join(', '),
+    function (provider) {
+      'use strict';
 
-    Image.setProvider(provider);
+      Image.setProvider(provider);
 
-    return provider;
+      return provider;
 
-  }, Image.setProvider('random'))
+    }, Image.setProvider('random'))
   .parse(process.argv);

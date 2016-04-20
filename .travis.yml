@@ -1,8 +1,11 @@
 language: node_js
 node_js:
-  - "stable"
-  - "5"
-  - "4"
-  - "0.12"
-  - "0.11"
-  - "0.10"
+  - 'stable'
+  - '5'
+  - '4'
+  - '0.12'
+  - '0.11'
+
+addons:
+  code_climate:
+    repo_token: 6b1d6957bdf83e5372daf804aa76cfbfd4ddd94bbd225b908f13287501a480f4

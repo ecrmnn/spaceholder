@@ -4,7 +4,8 @@ var http = require('http');
 var https = require('https');
 var fs = require('fs');
 var random = require('random-string');
-var Image = require('./image/Image')
+var Image = require('./image/Image');
+var readline = require('readline');
 
 /* Require Commander configuration */
 var program = require('./commanderConfig');
@@ -28,11 +29,11 @@ var download = function (url, dest) {
 
         var percentage = Math.ceil((createdFilesCount / program.number * 100));
 
-        console.info('Downloaded ' + createdFilesCount + ' of ' + program.number + '. [' + percentage + ' %]');
+        readline.cursorTo(process.stdout, 0);
+        process.stdout.write('Downloaded ' + createdFilesCount + ' of ' + program.number + '. [' + percentage + ' %]');
 
         if (createdFilesCount === program.number) {
-          console.info("\n" + program.number + ' image(s) successfully downloaded:');
-          console.log(createdFiles);
+          console.info("\n" + program.number + ' image(s) successfully downloaded');
         }
       });
     });
@@ -41,7 +42,7 @@ var download = function (url, dest) {
     })
   };
 
-  if (url.startsWith('http://')) {
+  if (url.substring(0, 7) === 'http://') {
     http.get(url, function (response) {
       handleResponse(response)
     });

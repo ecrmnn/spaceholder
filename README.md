@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/ecrmnn/spaceholder/master/spaceholder.jpg" alt="Spaceholder">
+# <img src="https://raw.githubusercontent.com/ecrmnn/spaceholder/master/spaceholder.jpg" alt="Spaceholder">
 
 > Download placeholder images from public domain sources blazingly fast
 
@@ -22,13 +22,16 @@ npm install -g spaceholder
 ```bash
 spaceholder
 # Downloads 1 image (1024x768px) into current directory
-
+```
+```bash
 spaceholder -n 100
 # Downloads 100 images into current directory
-
+```
+```bash
 spaceholder -s 800x600
 # Downloads 1 image (800x600px) into current directory
-
+```
+```bash
 spaceholder -n 50 -s 800x600 -p LoremPixel
 # Downloads 50 images (800x600px) from LoremPixel into current directory
 # If no --provider / -p is specified, each image is downloaded from a random provider

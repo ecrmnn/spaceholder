@@ -1,13 +1,13 @@
 {
   "name": "spaceholder",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "Download placeholder images from public domain sources blazingly fast",
   "preferGlobal": true,
   "bin": {
     "spaceholder": "index.js"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha test/index.js"
+    "test": "node_modules/.bin/mocha test"
   },
   "repository": {
     "type": "git",
@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "chai": "^3.2.0",
+    "execa": "^0.2.2",
     "mocha": "^2.2.5"
   }
 }
