@@ -10,8 +10,11 @@ Object.keys(Image.providers).forEach(function (provider) {
   describe('CLI, Provider: ' + provider + '. spaceholder -p ' + provider, function () {
     'use strict';
 
-    before(function () {
-      helpers.deleteSpaceholders();
+    before(function (done) {
+      helpers.deleteSpaceholders()
+        .then(function (response) {
+          done();
+        });
     });
 
     var result;
@@ -37,8 +40,11 @@ Object.keys(Image.providers).forEach(function (provider) {
       expect(dimensions).to.be.equal('1024x768');
     });
 
-    after(function () {
-      helpers.deleteSpaceholders();
+    after(function (done) {
+      helpers.deleteSpaceholders()
+        .then(function (response) {
+          done();
+        });
     });
   });
 });

@@ -20,8 +20,22 @@ module.exports = {
   },
 
   deleteSpaceholders: function () {
-    this.getSpaceholders().forEach(function (filename) {
-      fs.unlink(filename);
+    var spaceholders = this.getSpaceholders();
+    var count = spaceholders.length;
+
+    return new Promise(function (resolve, reject) {
+      if (count) {
+        spaceholders.forEach(function (filename) {
+          fs.unlinkSync(filename);
+          count--;
+
+          if (!count) {
+            resolve();
+          }
+        });
+      }
+
+      resolve();
     });
   },
 

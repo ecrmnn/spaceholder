@@ -7,8 +7,11 @@ var Image = require('../image/Image');
 describe('CLI: spaceholder', function () {
   'use strict';
 
-  before(function () {
-    helpers.deleteSpaceholders();
+  before(function (done) {
+    helpers.deleteSpaceholders()
+      .then(function (response) {
+        done();
+      });
   });
 
   var result;
@@ -28,15 +31,17 @@ describe('CLI: spaceholder', function () {
   it('should generate one image with default dimensions', function () {
     var dimensions = helpers.getDimensions(helpers.getSpaceholders()[0]);
     expect(dimensions).to.be.equal('1024x768');
-    helpers.deleteSpaceholders();
   });
 });
 
 describe('CLI: spaceholder -n 3', function () {
   'use strict';
 
-  before(function () {
-    helpers.deleteSpaceholders();
+  before(function (done) {
+    helpers.deleteSpaceholders()
+      .then(function (response) {
+        done();
+      });
   });
 
   var result;
@@ -66,8 +71,11 @@ describe('CLI: spaceholder -n 3', function () {
 describe('CLI: spaceholder -s 100x100', function () {
   'use strict';
 
-  before(function () {
-    helpers.deleteSpaceholders();
+  before(function (done) {
+    helpers.deleteSpaceholders()
+      .then(function (response) {
+        done();
+      });
   });
 
   var result;
@@ -91,7 +99,6 @@ describe('CLI: spaceholder -s 100x100', function () {
   it('should be 100x100', function () {
     var dimensions = helpers.getDimensions(helpers.getSpaceholders()[0]);
     expect(dimensions).to.be.equal('100x100');
-    helpers.deleteSpaceholders();
   });
 });
 
