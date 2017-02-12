@@ -2,7 +2,7 @@ var fs = require('fs');
 var program = require('commander');
 var Image = require('./image/Image');
 
-module.exports = program.version('1.9.0', '-v, --version')
+module.exports = program.version('1.9.2', '-v, --version')
   .option('-n, --number [integer]', 'Number of files to generate', function (numberString) {
     'use strict';
 
