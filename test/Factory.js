@@ -54,7 +54,7 @@ describe('Image Providers', function () {
     Image.setProvider('DummyImage');
 
     expect(Image.getImageUrl(size))
-      .to.equal('http://dummyimage.com/400x400/000/fff');
+      .to.equal('https://dummyimage.com/400x400/000/fff');
   });
 
   it('returns UnsplashIt URL', function () {
@@ -68,6 +68,6 @@ describe('Image Providers', function () {
     Image.setProvider('FakeImg');
 
     expect(Image.getImageUrl(size))
-      .to.equal('http://fakeimg.pl/400x400/384f66/ecf0f1/?text=Spaceholder&font=lobster');
+      .to.equal('https://fakeimg.pl/400x400/384f66/ecf0f1/?text=Spaceholder&font=lobster');
   });
 });
