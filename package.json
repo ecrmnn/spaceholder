@@ -1,6 +1,6 @@
 {
   "name": "spaceholder",
-  "version": "1.10.0",
+  "version": "1.10.1",
   "description": "Download placeholder images from public domain sources blazingly fast",
   "preferGlobal": true,
   "bin": {
@@ -48,8 +48,7 @@
   "homepage": "https://github.com/ecrmnn/spaceholder",
   "dependencies": {
     "commander": "^2.8.1",
-    "random-string": "^0.1.2",
-    "follow-redirects": "^1.2.5"
+    "random-string": "^0.1.2"
   },
   "devDependencies": {
     "chai": "^3.2.0",
