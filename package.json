@@ -24,6 +24,7 @@
     "public",
     "domain",
     "unsplash.it",
+    "lorempicsum",
     "fakeimg.pl",
     "fake images",
     "fakeimg"
@@ -47,7 +48,8 @@
   "homepage": "https://github.com/ecrmnn/spaceholder",
   "dependencies": {
     "commander": "^2.8.1",
-    "random-string": "^0.1.2"
+    "random-string": "^0.1.2",
+    "follow-redirects": "^1.2.5"
   },
   "devDependencies": {
     "chai": "^3.2.0",
