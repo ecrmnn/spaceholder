@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
-var http = require('follow-redirects').http;
-var https = require('follow-redirects').https;
+var http = require('http');
+var https = require('https');
 var fs = require('fs');
 var random = require('random-string');
 var Image = require('./image/Image');
