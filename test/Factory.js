@@ -57,11 +57,11 @@ describe('Image Providers', function () {
       .to.equal('https://dummyimage.com/400x400/000/fff');
   });
 
-  it('returns UnsplashIt URL', function () {
-    Image.setProvider('UnsplashIt');
+  it('returns LoremPicsum URL', function () {
+    Image.setProvider('LoremPicsum');
 
     expect(Image.getImageUrl(size))
-      .to.equal('https://unsplash.it/400/400');
+      .to.include('https://picsum.photos/400/400');
   });
 
   it('returns FakeImg URL', function () {
