@@ -4,7 +4,7 @@ module.exports = {
     PlaceholdIt: require('./providers/PlaceholdIt'),
     PlaceImg: require('./providers/PlaceImg'),
     DummyImage: require('./providers/DummyImage'),
-    UnsplashIt: require('./providers/UnsplashIt'),
+    LoremPicsum: require('./providers/LoremPicsum'),
     FakeImg: require('./providers/FakeImg')
   },
 
