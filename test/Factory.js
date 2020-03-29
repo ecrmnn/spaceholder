@@ -36,13 +36,6 @@ describe('Image Providers', function () {
       .to.equal('http://lorempixel.com/400/400/');
   });
 
-  it('returns PlaceholdIt URL', function () {
-    Image.setProvider('PlaceholdIt');
-
-    expect(Image.getImageUrl(size))
-      .to.equal('http://placeholdit.imgix.net/~text?txtsize=40&txt=Spaceholder&w=400&h=400');
-  });
-
   it('returns PlaceImg URL', function () {
     Image.setProvider('PlaceImg');
 
