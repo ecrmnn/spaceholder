@@ -1,11 +1,14 @@
 #! /usr/bin/env node
 
-var http = require('http');
-var https = require('https');
+var followRedirects = require('follow-redirects');
+var http = followRedirects.http;
+var https = followRedirects.https;
 var fs = require('fs');
 var random = require('random-string');
 var Image = require('./image/Image');
 var readline = require('readline');
+
+followRedirects.maxRedirects = 10;
 
 /* Require Commander configuration */
 var program = require('./commanderConfig');
