@@ -46,6 +46,7 @@
   "homepage": "https://github.com/ecrmnn/spaceholder",
   "dependencies": {
     "commander": "^2.8.1",
+    "follow-redirects": "^1.15.0",
     "random-string": "^0.1.2"
   },
   "devDependencies": {
