@@ -1,6 +1,5 @@
 module.exports = {
   providers: {
-    LoremPixel: require('./providers/LoremPixel'),
     PlaceImg: require('./providers/PlaceImg'),
     DummyImage: require('./providers/DummyImage'),
     LoremPicsum: require('./providers/LoremPicsum'),
