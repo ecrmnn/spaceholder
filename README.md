@@ -10,7 +10,7 @@
 
 ### What is it?
 Spaceholder makes it easy to download placeholder images when you need them.
-Images are downloaded from LoremPixel.com, Placehold.it, PlaceIMG.com, Dummyimage.com, Unsplash.it.
+Images are downloaded from Picsum.photos, PlaceIMG.com, Dummyimage.com, Fakeimg.pl.
 
 ### Installation
 Spaceholder requires that you have Node.js installed on you computer
@@ -32,18 +32,16 @@ spaceholder -s 800x600
 # Downloads 1 image (800x600px) into current directory
 ```
 ```bash
-spaceholder -n 50 -s 800x600 -p LoremPixel
-# Downloads 50 images (800x600px) from LoremPixel into current directory
+spaceholder -n 50 -s 800x600 -p LoremPicsum
+# Downloads 50 images (800x600px) from LoremPicsum into current directory
 # If no --provider / -p is specified, each image is downloaded from a random provider
 ```
 
 ### Providers / Sources
 - [Dummy Image](http://dummyimage.com)
 - [FakeImg](fakeimg.pl)
-- [Lorem Pixel](http://lorempixel.com)
-- [PlaceholdIt](https://placehold.it)
+- [Picsum Photos](http://picsum.photos)
 - [PlaceImg](http://placeimg.com)
-- [UnsplashIt](https://unsplash.it)
 
 ### Contributors
 - [mrtnsn](https://github.com/mrtnsn)

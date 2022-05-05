@@ -29,13 +29,6 @@ describe('Image Providers', function () {
 
   var size = '400x400';
 
-  it('returns Lorem Pixel URL', function () {
-    Image.setProvider('LoremPixel');
-
-    expect(Image.getImageUrl(size))
-      .to.equal('http://lorempixel.com/400/400/');
-  });
-
   it('returns PlaceImg URL', function () {
     Image.setProvider('PlaceImg');
 
